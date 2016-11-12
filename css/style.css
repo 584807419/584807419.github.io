@@ -528,7 +528,7 @@ header, nav, footer, aside, section {
 	display: inline-block;
 	position: relative;
     left: 50%;
-    margin-left: -578px;
+    margin-left: -630px;
 	padding: 5px 0;
 	overflow: hidden;
 }
