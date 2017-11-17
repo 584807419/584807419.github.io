@@ -1,2 +1,2 @@
 # 584807419.github.io
-zhangkun.info
+http://www.devnav.win
