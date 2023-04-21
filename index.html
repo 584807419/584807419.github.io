@@ -1,90 +1,244 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>videotools.cn</title><meta
-      name="videotools.cn"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
-    />
-    <meta name="x5-orientation" content="portrait" />
-    <meta name="renderer" content="webkit" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <link rel="shortcut icon" href="https://okjx.cc/favicon.ico" />
-    <link href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-930f617e-1c8a-41a9-b311-3c69b907d872/ff66a5d9-5e78-4ed6-bddf-7d6f1c1507cf.css" rel="stylesheet" />
-    <link href="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-930f617e-1c8a-41a9-b311-3c69b907d872/2a7a5441-0ff3-4084-bca7-edf857d5d256.css" rel="stylesheet" />
-    <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
-    <script src="https://unpkg.com/video.js/dist/video.js"></script>
-    <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
-    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
-    <style>
-      body,
-      html {
-        font: 24px "Microsoft YaHei", Arial, Lucida Grande, Tahoma, sans-serif;
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-        background-color: black;
-      }
-      #loading {
-        width: 100%;
-        height: 100%;
-        padding: 0;
-        margin: 0;
-        text-align: left;
-        display: table;
-        position: absolute;
-        z-index: 10000000001;
-        background-size: 100%100%;
-      }
-      h1 {
-        color: #ffffff;
-        font-size: 1.2rem;
-        margin: 0;
-        padding: 0;
-        vertical-align: middle;
-        display: table-cell;
-      }
-	</style>
-    <script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-930f617e-1c8a-41a9-b311-3c69b907d872/2eaf1856-2bd8-4ad9-b2b8-4b04cfafd5b2.js"></script>
-    <script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-930f617e-1c8a-41a9-b311-3c69b907d872/3c22672a-402f-4920-ae40-a2fe32368aa4.js"></script>
-    <script src="https://vkceyugu.cdn.bspapp.com/VKCEYUGU-930f617e-1c8a-41a9-b311-3c69b907d872/e78b1e29-b325-43d8-bbdf-2c98fcdfafc8.js"></script>
-  </head>
-  
-  
-  <body>
-    <div class="video-panel">
-      <div class="video-panel-video-wrapper">
-        <video
-          id="js-panel-video"
-          class="video-panel-bg-video"
-          loop
-          muted
-          preload="none"
-        >
-          <source src="https://okjx.cc/include/loding/mp4.php" type="video/mp4" />
-        </video>
-      </div>
+<html lang="zh">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="Keywords" content="开发者网站导航，开发者网址导航，开发导航，开发者导航，开发教程，资源下载，用户体验，开发者招聘">
+<meta name="description" content="张昆的开发者导航！" />
+<title>开发者网址导航</title>
+<meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<link rel="stylesheet" type="text/css" href="css/style.css?ver=6">
+<!--[if lte IE 8]>
+<script type="text/javascript">
+(function(){ 
+window.browserFlag = 'lteIE8';
+for(var i=0,el=['header','nav','footer','aside','section'];i<el.length;i++) document.createElement(el[i]); 
+})();
+</script>
+<![endif]-->
+<script>
+/*频繁更新的数据不写在js文件里*/
+var INPUT_PLACEHOLDER = 'Hello World！';
+var KeywordConfig = {
+    title: '开发者推荐：',
+    num: 4, //一次显示几个
+    delay: 5, //间隔多少秒换一次，不要少于3
+    data: [
+        {kw: 'CSDN', url:'http://www.csdn.net/'},
+        {kw: '开源中国', url:'https://www.oschina.net/'},
+		{kw: 'w3school', url:'http://www.w3school.com.cn/'},
+		{kw: '菜鸟教程', url:'http://www.runoob.com/'},        
+        {kw: 'coding', url:'https://coding.net/'},        
+		{kw: '卡饭论坛', url:'http://bbs.kafan.cn/'},
+        {kw: '吾爱破解', url:'http://www.52pojie.cn/'},       
+        {kw: '汇编语言', url:'http://www.feiesoft.com/asm/'}    
+    ]
+};
+</script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?7aeefdb15fe9aede961eee611c7e48a5";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+<div id="shortcut">
+    <nav>
+        <a href="#download" class="icon-download">资源下载</a>
+		<a href="#tool" class="icon-tool">神器推荐</a>
+		<a href="#learn" class="icon-learn">开发培训</a>
+		<a href="#weibo" class="icon-weibo">热门微博</a>
+
+    </nav>
+</div>
+
+
+<div id="header">
+  <div class="wrapper">
+    <header>
+      <h1 id="logo"><a href="http://zhangkun.info" title="开发者导航"><img src="img/logo.png" alt="SDC开发者网址导航" /></a></h1>
+    </header>
+    <div id="search">
+     <form action="http://www.baidu.com/s" target="_blank" >
+        <input type="text" class="keyword default-word" name="wd"/>
+        <input type="submit" value="百度搜索" name="baidu" class="button" />
+
+      </form>
+    </div>    
+    <div class="tools">
+	<a href="http://google.adwiki.cn/" class="icon-translate" title="谷歌镜像" target="_blank">谷歌镜像</a>
+	<a href="http://c.runoob.com/" class="icon-translate" title="在线工具" target="_blank">在线工具</a>
+	<a href="http://tool.oschina.net/hexconvert/" class="icon-add" title="进制转换" target="_blank">进制转换</a>
+	<a href="/" class="icon-favor" title="加入收藏">按Ctrl+D收藏</a></div>
+  </div>
+</div>
+
+<div id="content">
+	<div class="guide">
+		<div class="wrapper">
+
+		    <nav class="site-list">
+		        <a class="item" href="https://github.com/"  target="_blank">github</a>
+                <a class="item" href="http://www.pediy.com/"  target="_blank" style="color:#FA5F5F;">看雪学院</a>
+		        <a class="item" href="http://blog.csdn.net/u013205877?viewmode=contents"  target="_blank">站长博客</a>
+
+		    </nav>
+		    <section class="estab">
+		    	<header class="title">特别推荐</header>
+		    	<ul class="list">
+		    		<li class="item">
+		    			<a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html?from=timeline&isappinstalled=0" title="安卓开发"  target="_blank"><img src="http://image.uisdc.com/wp-content/uploads/2015/05/dh-pic-2.png"/><span>Android开发</span></a>
+		    		</li>
+
+		    		<li class="item">
+		    			<a href="http://www.runoob.com/swift/swift-tutorial.html"title="Swift"  target="_blank"><img src="http://image.uisdc.com/wp-content/uploads/2015/05/dh-pic-1.png"/><span>Swift</span></a>
+		    		</li>
+		    	</ul>
+		    </section>
+	    </div>
+	</div>
+  <div class="wrapper">
+    <div id="catalog">
+
+        <section data-catalog="download" class="active">
+        <header>
+          <h2 class="icon-download"><a href="https://live.sysinternals.com/" target="_blank">资源下载</a></h2>
+        </header>
+        <ul class="website-list">
+          <li class="hot-item"> <a href="https://live.sysinternals.com/" class="website" target="_blank">Sysinternals Live</a>
+            <p class="description">微软官方出品</p>
+          </li>
+          <li class="new-item"> <a href="http://www.ccav1.com/" class="website" target="_blank">CCAV</a>
+            <p class="description">破解软件才好用</p>
+          </li>
+          <li class="hot-item"> <a href="http://down.52pojie.cn/Tools/Anti_Rootkit/" class="website" target="_blank">爱盘</a>
+            <p class="description">爱盘 -- 在线破解工具包</p>
+         </li>
+
+        </ul>
+
+
+		</section>
+
+        <section data-catalog="tool" class="active">
+        <header>
+          <h2 class="icon-tool">神器推荐</h2>
+
+        </header>
+        <ul class="website-list">
+          <li class="hot-item"><a href="http://www.xuetr.com/" class="website" target="_blank">PC Hunter</a>
+            <p class="description">手工杀毒辅助软件</p>
+          </li>
+          <li class="new-item"><a href="https://www.chuyu.me/" class="website" target="_blank">Dism++</a>
+            <p class="description">Dism++，也许是最强的实用工具</p>
+           </li>     
+        </ul>
+
+		</section>
+
+        <section data-catalog="learn" class="active">
+        <header>
+          <h2 class="icon-learn">开发培训</h2>
+        </header>
+        <ul class="website-list">
+          <li class="hot-item"><a href="http://www.imooc.com/" class="website" target="_blank">慕课网(IMOOC)</a>
+            <p class="description">慕课网(IMOOC)是IT技能学习平台</p>
+          </li>
+          <li class="new-item"><a href="http://www.jikexueyuan.com/" class="website" target="_blank">极客学院</a>
+            <p class="description">极客学院作为中国专业IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域</p>
+          </li>
+
+        </ul>
+          </section>
+
+      <section data-catalog="weibo" class="active">
+        <header>
+          <h2 class="icon-weibo">热门微博</h2>
+        </header>
+        <ul class="website-list">
+          <li class="new-item"><a href="http://weibo.com/vczh" class="website" target="_blank">Vczh</a>
+            <p class="description">知乎大V轮子哥</p>
+          </li>
+          <li><a href="http://weibo.com/fenng" class="website" target="_blank">Fenng</a>
+            <p class="description">手艺人，写字儿的。做过不会写代码的水货 CTO</p>
+          </li>          
+          <li><a href="http://weibo.com/fenng" class="website" target="_blank">Fenng</a>
+            <p class="description">手艺人，写字儿的。做过不会写代码的水货 CTO</p>
+          </li>   
+        </ul>
+          </section>
+
     </div>
-    
-    
-    <div id="loading" class="left">
-    <font color="white">凤凰资讯</font>
-			<p>
-			  <video id="my_video_1" class="video-js vjs-default-skin" controls preload="auto" data-setup='{}'>
-				<source src="https://playtv-live.ifeng.com/live/06OLEEWQKN4.m3u8" type="application/x-mpegURL">
-			  </video>
-			</p>
-			<font color="white">凤凰中文</font>
-			<p>
-			  <video id="my_video_2" class="video-js vjs-default-skin" controls preload="auto" data-setup='{}'>
-				<source src="https://playtv-live.ifeng.com/live/06OLEGEGM4G.m3u8" type="application/x-mpegURL">
-			  </video>
-			</p>
-			<a href="https://okjx.cc/?url=https://v.qq.com/x/cover/mzc0020027yzd9e/c0044v6apa5.html" target="blank"><font color="white">OKJX</font></a>
+    <div class="tips">
+        <em class="slogan"><a style="color:#fa5f5f"; target="_blank" href="http://www.ziwork.com/">CSDN论坛</a></em> 
+        <span class="hot-words"></span>
     </div>
-    
-  </body>
+    <!--<div style="margin:40px auto;text-align:center;" id="sponsor">
+    <script type="text/javascript">
+    /*导航AD*/
+    var cpro_id = "u1663818";
+    </script>
+    <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
+    </div>-->
+
+
+
+  </div>
+</div>
+<aside id="aside">
+  <div class="wrapper">
+    <div style="height:300px;">
+      <section class="counter">
+        <header>
+          <h3>只收录干货</h3>
+          <span class="number"><i>9</i>个</span> </header>
+        <span class="update-date">导航更新日期: <i>2016-11-11</i></span>
+        <div class="recommend"> <span>还有更赞的</span> <a class="btn-recommend" href="http://f2er.club/"  target="_blank"><i>醉牛前端</i></a> </div>
+      </section>
+      <section class="classics">
+        <header>
+          <h3>经典教程</h3>
+        </header>
+        <ol class="classics-article-list">
+          <li><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank">Android学习之路</a></li>
+          <li><a href="http://lib.csdn.net/article/css3/39436" target="_blank">CSS常见属性</a></li>
+
+        </ol>
+        <div class="recommend"> <span>这不算什么</span> <a class="btn-recommend" href="http://weibo.com/2247605355/profile"  target="_blank"><i>投稿</i></a> </div>
+      </section>
+      <section class="toolkit">
+        <header>
+          <h3>支付宝</h3>
+        </header>
+        <div class="content">          
+          <img src="img/alipay.jpg" alt="支付宝" width="180" style="margin:12px 0 0 26px;" height="180" />
+          <p style="text-align:center">如果这个导航能帮得上您<strong style="color:#fff"></strong> <br>希望能获得您的捐赠</p>
+        </div>
+      </section>
+      <section class="story">
+        <header>
+          <h3>微信</h3>
+        </header>
+        <div class="content">          
+          <img src="img/wechatjpg.jpg" alt="微信" width="180" style="margin:12px 0 0 26px;" height="180" />
+          <p style="text-align:center">微信号：<strong style="color:#fff">584807419</strong> <br>有事您说话</p>
+        </div>
+      </section>
+      <section class="power">
+        <header>
+          <h3>闲言</h3>
+        </header>
+
+          <div class="friends"> <span class="item">站长:<a href="http://weibo.com/234008109" target="_blank">@张昆</a></span> <span class="item">公益导航，刚开始还不成熟。参考了优设网的设计，表示感谢，如有侵权，请联系我！</span> </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</aside>
+<script src="js/jquery.js"></script> 
+<script src="js/main.js?v=1"></script>
+</body>
 </html>
