@@ -1,191 +1,378 @@
 <!DOCTYPE html>
 <html lang="zh">
 <head>
+<meta name="360-site-verification" content="dbbe17dbfbf27cc0a066e46d998d8bd8" />
+<meta name="baidu-site-verification" content="pNlgjqp0oV" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
 <meta name="Keywords" content="开发者网站导航，开发者网址导航，开发导航，开发者导航，开发教程，资源下载，用户体验，开发者招聘">
-<meta name="description" content="张昆的开发者导航！" />
+<meta name="description" content="开发者导航！" />
 <title>开发者网址导航</title>
 <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,user-scalable=no">
-<link rel="stylesheet" type="text/css" href="css/style.css?ver=6">
-<!--[if lte IE 8]>
-<script type="text/javascript">
-(function(){ 
-window.browserFlag = 'lteIE8';
-for(var i=0,el=['header','nav','footer','aside','section'];i<el.length;i++) document.createElement(el[i]); 
-})();
-</script>
-<![endif]-->
+<link rel="stylesheet" type="text/css" href="devnav/css/style.css">
+
 <script>
-/*频繁更新的数据不写在js文件里*/
-var INPUT_PLACEHOLDER = 'Hello World！';
-var KeywordConfig = {
-    title: '开发者推荐：',
-    num: 4, //一次显示几个
-    delay: 5, //间隔多少秒换一次，不要少于3
-    data: [
-        {kw: 'CSDN', url:'http://www.csdn.net/'},
-        {kw: '开源中国', url:'https://www.oschina.net/'},
-		{kw: 'w3school', url:'http://www.w3school.com.cn/'},
-		{kw: '菜鸟教程', url:'http://www.runoob.com/'},        
-        {kw: 'coding', url:'https://coding.net/'},        
-		{kw: '卡饭论坛', url:'http://bbs.kafan.cn/'},
-        {kw: '吾爱破解', url:'http://www.52pojie.cn/'},       
-        {kw: '汇编语言', url:'http://www.feiesoft.com/asm/'}    
-    ]
-};
-</script>
-<script>
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?7aeefdb15fe9aede961eee611c7e48a5";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+<!--------------------------------访问的时候给百度自动提交----------------------------------->
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
 })();
+<!--------------------------------访问的时候给百度自动提交----------------------------------->
 </script>
+
+<script src="http://s1.bdstatic.com/r/www/cache/global/js/BaiduHttps_20150714_zhanzhang.js"></script>
+<script>
+<!--------------------------------百度搜索框----------------------------------->
+    function checkHttps () {
+        BaiduHttps.useHttps();    
+    };
+    function baiduWithHttps (formname) {
+        var data = BaiduHttps.useHttps();
+        if (data.s === 0) {
+            return true;
+        }
+        else {
+            formname.action = 'https://www.baidu.com/baidu' + '?ssl_s=1&ssl_c' + data.ssl_code;
+            return true;
+        }
+    };
+<!--------------------------------百度搜索框----------------------------------->
+</script>
+
 </head>
 <body>
-<div id="shortcut">
+<!--------------------------------top----------------------------------->
+<div id="toptoptop">
     <nav>
-        <a href="#download" class="icon-download">资源下载</a>
-		<a href="#tool" class="icon-tool">神器推荐</a>
-		<a href="#learn" class="icon-learn">开发培训</a>
-		<a href="#weibo" class="icon-weibo">热门微博</a>
-
+        <a href="#downloados">操作系统</a>
+		<a href="#download">资源下载</a>
+		<a href="#learn">论坛社区</a>
+		<a href="#FD">前端推荐</a>
+   		<a href="#SA">文件分析</a>
     </nav>
 </div>
+<!--------------------------------top----------------------------------->
 
-
+<!--------------------------------logo&search---------------------------------------------------------------------------->
 <div id="header">
   <div class="wrapper">
     <header>
-      <h1 id="logo"><a href="http://zhangkun.info" title="开发者导航"><img src="img/logo.png" alt="SDC开发者网址导航" /></a></h1>
+      <h1 id="logo"><a href="http://devnav.win" title="开发者导航"><img src="./devnav/img/logo.png" alt="开发者网址导航" /></a></h1>
     </header>
     <div id="search">
-     <form action="http://www.baidu.com/s" target="_blank" >
-        <input type="text" class="keyword default-word" name="wd"/>
-        <input type="submit" value="百度搜索" name="baidu" class="button" />
-
-      </form>
-    </div>    
+	  
+		<form onsubmit="return baiduWithHttps(this)" action="http://www.baidu.com/baidu" target="_blank">
+		    <input name="tn" type="hidden" value="SE_zzsearchcode_shhzc78w">
+			<input type="text" class="keyword default-word"  onfocus="checkHttps" name="word" value="Hello World！">
+		    <input type="submit" value="百度搜索" name="baidu" class="button" />
+		</form>
+	  
+    </div>
+    
     <div class="tools">
-	<a href="http://google.adwiki.cn/" class="icon-translate" title="谷歌镜像" target="_blank">谷歌镜像</a>
+    <!--<a href="TGFW8888888888888888888888.html" class="icon-translate" title="极速翻墙" target="_blank">极速翻墙</a>-->
+	<a href="http://guge.suanfazu.com/" class="icon-translate" title="谷歌镜像" target="_blank">谷歌镜像</a>
 	<a href="http://c.runoob.com/" class="icon-translate" title="在线工具" target="_blank">在线工具</a>
 	<a href="http://tool.oschina.net/hexconvert/" class="icon-add" title="进制转换" target="_blank">进制转换</a>
 	<a href="/" class="icon-favor" title="加入收藏">按Ctrl+D收藏</a></div>
   </div>
 </div>
+<!--------------------------------logo&search---------------------------------------------------------------------------->
+
 
 <div id="content">
+
+<!--------------------------------站点推荐---------------------------------------------------------------------------->
 	<div class="guide">
 		<div class="wrapper">
 
 		    <nav class="site-list">
-		        <a class="item" href="https://github.com/"  target="_blank">github</a>
-                <a class="item" href="http://www.pediy.com/"  target="_blank" style="color:#FA5F5F;">看雪学院</a>
-		        <a class="item" href="http://blog.csdn.net/u013205877?viewmode=contents"  target="_blank">站长博客</a>
-
+			    <a class="item" href="./Languagestudy/pythonstudy.html" style="color:#FA5F5F;" target="_blank">推荐站点</a>
+		        <a class="item" href="https://fir.im/"  target="_blank">fir.im</a>
+				<a class="item" href="https://ide.coding.net/256"  target="_blank">WebIDE</a>
+				<a class="item" href="http://www.doyoudo.com/"  target="_blank">doyoudo</a>
+				<a class="item" href="https://www.v2ex.com/"  target="_blank">V2EX</a>
+				<a class="item" href="https://www.zaoshu.io/"  target="_blank">智能云爬虫</a>
+				<a class="item" href="https://dida365.com"  target="_blank">嘀嗒清单</a>
+		        <a class="item" href="https://www.zhihu.com/"  target="_blank">知乎</a>
+		        
+		        <a class="item" href="./dlurltran/dlurltran.html"  target="_blank">链接转换</a>
+				<a class="item" href="https://developers.google.cn/china/"  target="_blank">Google 中国开发者</a>
+								
+                
 		    </nav>
-		    <section class="estab">
-		    	<header class="title">特别推荐</header>
-		    	<ul class="list">
-		    		<li class="item">
-		    			<a href="http://www.runoob.com/w3cnote/android-tutorial-intro.html?from=timeline&isappinstalled=0" title="安卓开发"  target="_blank"><img src="http://image.uisdc.com/wp-content/uploads/2015/05/dh-pic-2.png"/><span>Android开发</span></a>
-		    		</li>
-
-		    		<li class="item">
-		    			<a href="http://www.runoob.com/swift/swift-tutorial.html"title="Swift"  target="_blank"><img src="http://image.uisdc.com/wp-content/uploads/2015/05/dh-pic-1.png"/><span>Swift</span></a>
-		    		</li>
-		    	</ul>
-		    </section>
+		   
 	    </div>
+		
 	</div>
+<!--------------------------------站点推荐---------------------------------------------------------------------------->	
+
+<!--------------------------------站点推荐---------------------------------------------------------------------------->
+	<div class="guide">
+		<div class="wrapper">
+
+		    <nav class="site-list">
+                <a class="item" href="./Languagestudy/pythonstudy.html" style="color:#FA5F5F;" target="_blank">学习资源</a>
+		        <a class="item" href="http://www.runoob.com/html/html5-intro.html"  target="_blank">HTML5</a>
+				<a class="item" href="http://www.runoob.com/css3/css3-tutorial.html"  target="_blank">CSS3</a>
+				<a class="item" href="http://www.w3school.com.cn/b.asp"  target="_blank">JS</a>
+				<a class="item" href="http://www.runoob.com/php/php-tutorial.html"  target="_blank">PHP</a>
+				<a class="item" href="http://www.runoob.com/lua/lua-tutorial.html"  target="_blank">Lua</a>
+				<a class="item" href="http://wiki.jikexueyuan.com/project/ruby/"  target="_blank">Ruby</a>
+				<a class="item" href="http://www.runoob.com/perl/perl-tutorial.html"  target="_blank" >Perl</a>
+		        <a class="item" href="http://www.runoob.com/nodedevnav/js/nodejs-tutorial.html"  target="_blank">Node.js</a>
+				<a class="item" href="http://wiki.jikexueyuan.com/project/the-way-to-go/"  target="_blank">Go语言</a>
+		        <a class="item" href="http://www.runoob.com/cprogramming/c-tutorial.html"  target="_blank">C语言</a>
+				<a class="item" href="./Languagestudy/cplusplusstudy.html"  target="_blank">C++</a>
+				<a class="item" href="http://www.runoob.com/swift/swift-tutorial.html" target="_blank">Swift</a>
+				<a class="item" href="./Languagestudy/androidstudy.html" target="_blank">Android</a>				
+				<a class="item" href="./Languagestudy/pythonstudy.html"target="_blank">Python</a>
+				<a class="item" href="http://116.196.98.152/pythonnav/" style="color:#FA5F5F;" target="_blank">Python大学习</a>
+		    </nav>
+	    </div>
+		
+	</div>
+<!--------------------------------站点推荐---------------------------------------------------------------------------->	
+
+
+
   <div class="wrapper">
     <div id="catalog">
-
-        <section data-catalog="download" class="active">
+	
+        <section data-catalog="downloados" class="active">
+        <header>
+          <h2 class="icon-download"><a href="./moreDL/moreDL.html" target="_blank">操作系统</a></h2>
+        </header>
+        <ul class="website-list">
+			<li class="hot-item"> <a href="./Computerstudy/reinstallOSwin7.html" class="website" target="_blank">安装系统教程</a>
+            <p class="description">安装Win7操作系统教程</p>
+          </li>
+		  <li class="hot-item"> <a href="ed2k://|file|zh-hans_windows_xp_professional_with_service_pack_3_x86_cd_vl_x14-74070.iso|630237184|EC51916C9D9B8B931195EE0D6EE9B40E|/" class="website" target="_blank">Windows XP</a>
+            <p class="description">下载官方Windows XP 32位版本</p>
+          </li>
+          <li class="hot-item"> <a href="ed2k://|file|cn_windows_7_ultimate_with_sp1_x86_dvd_u_677486.iso|2653276160|7503E4B9B8738DFCB95872445C72AEFB|/" class="website" target="_blank">Windows 7</a>
+            <p class="description">下载官方Windows 7 32位版本</p>
+          </li>
+          
+          <li class="hot-item"> <a href="ed2k://|file|cn_windows_7_ultimate_with_sp1_x64_dvd_u_677408.iso|3420557312|B58548681854236C7939003B583A8078|/" class="website" target="_blank">Windows 7</a>
+            <p class="description">下载官方Windows 7 64位版本</p>
+          </li>
+		  <li class="hot-item"> <a href="ed2k://|file|cn_windows_10_multiple_editions_version_1607_updated_jan_2017_x86_dvd_9714392.iso|3621646336|99C607CB5DEA2B245D131F03E5F6522F|/" class="website" target="_blank">Windows 10 14393</a>
+            <p class="description">下载官方Windows 10 32位版本</p>
+          </li>
+          <li class="hot-item"> <a href="ed2k://|file|cn_windows_10_multiple_editions_version_1607_updated_jan_2017_x64_dvd_9714394.iso|4747692032|27841B07666580185078EE62915191A1|/" class="website" target="_blank">Windows 10 14393</a>
+            <p class="description">下载官方Windows 10 64位版本</p>
+          </li>
+		  <li class="hot-item"> <a href="http://pan.baidu.com/s/1nuVckJZ" class="website" target="_blank">小马OEM7</a>
+            <p class="description">小马激活原版OEM7，纯净无毒</p>
+          </li>
+		  <li class="hot-item"> <a href="http://pan.baidu.com/s/1i451VnR" class="website" target="_blank">WIN7Activation</a>
+            <p class="description">WIN7Activation</p>
+          </li>
+		  <li class="hot-item"> <a href="http://pan.baidu.com/s/1miCx8H6" class="website" target="_blank">XP密钥</a>
+            <p class="description">XP密钥</p>
+          </li>
+          	  
+          	  
+        </ul>
+      
+		<a href="./Computerstudy/reinstallOSwin7.html" class="more-item" target="_blank" style="text-align: center"></br></br></br>更</br></br></br>多</br></a>
+         
+		</section>
+		
+		
+		<section data-catalog="download" class="active">
         <header>
           <h2 class="icon-download"><a href="https://live.sysinternals.com/" target="_blank">资源下载</a></h2>
         </header>
         <ul class="website-list">
-          <li class="hot-item"> <a href="https://live.sysinternals.com/" class="website" target="_blank">Sysinternals Live</a>
-            <p class="description">微软官方出品</p>
+		  <li class="hot-item"> <a href="http://www.chromein.com/" class="website" target="_blank">Chromein</a>
+            <p class="description">Chrome插件极速下载</p>
           </li>
-          <li class="new-item"> <a href="http://www.ccav1.com/" class="website" target="_blank">CCAV</a>
-            <p class="description">破解软件才好用</p>
+          <li class="hot-item"> <a href="https://greasyfork.org/zh-CN" class="website" target="_blank">Greasy Fork</a>
+            <p class="description">一个提供用户脚本的网站</p>
           </li>
+          
           <li class="hot-item"> <a href="http://down.52pojie.cn/Tools/Anti_Rootkit/" class="website" target="_blank">爱盘</a>
             <p class="description">爱盘 -- 在线破解工具包</p>
-         </li>
-
-        </ul>
-
-
-		</section>
-
-        <section data-catalog="tool" class="active">
-        <header>
-          <h2 class="icon-tool">神器推荐</h2>
-
-        </header>
-        <ul class="website-list">
-          <li class="hot-item"><a href="http://www.xuetr.com/" class="website" target="_blank">PC Hunter</a>
-            <p class="description">手工杀毒辅助软件</p>
           </li>
-          <li class="new-item"><a href="https://www.chuyu.me/" class="website" target="_blank">Dism++</a>
-            <p class="description">Dism++，也许是最强的实用工具</p>
-           </li>     
+		  <li class="hot-item"> <a href="http://pan.baidu.com/share/home?uk=3560277524&view=share#category/type=0" class="website" target="_blank">itcast</a>
+            <p class="description">传智播客itcast的网盘</p>
+          </li>
+          <li class="new-item"> <a href="http://www.xiaoshuwu.net/" class="website" target="_blank">小书屋</a>
+            <p class="description">支持正版，电子书好在方便。</p>
+          </li>
+          <li class="new-item"> <a href="http://www.dayanzai.me/" class="website" target="_blank">大眼仔旭</a>
+            <p class="description">优秀汉化应用软件</p>
+          </li>
+          <li class="new-item"> <a href="http://www.ccav1.com/" class="website" target="_blank">CCAV</a>
+            <p class="description">破解版本</p>
+          </li>
+          <li class="new-item"> <a href="http://www.appinn.com/" class="website" target="_blank">小众软件</a>
+            <p class="description">分享免费、小巧、实用、有趣、绿色的软件</p>
+          </li>
+          <li class="new-item"> <a href="http://www.portablesoft.org/" class="website" target="_blank">绿色软件</a>
+            <p class="description">追求绿色便携理念，打造清爽干净系统</p>
+          </li>
+          
+          	  
         </ul>
-
+      
+		<a href="./moreDL/moreDL.html" class="more-item" target="_blank" style="text-align: center"></br></br></br>系</br>统</br>工</br>具</a>
+         
 		</section>
-
+		
+     
+		
         <section data-catalog="learn" class="active">
         <header>
-          <h2 class="icon-learn">开发培训</h2>
+          <h2 class="icon-learn">论坛社区</h2>
         </header>
         <ul class="website-list">
-          <li class="hot-item"><a href="http://www.imooc.com/" class="website" target="_blank">慕课网(IMOOC)</a>
-            <p class="description">慕课网(IMOOC)是IT技能学习平台</p>
+		  
+          <li class="new-item"><a href="http://bbs.kafan.cn/" class="website" target="_blank">卡饭论坛</a>
+            <p class="description">计算机安全，杀毒软件交流中心</p>
           </li>
-          <li class="new-item"><a href="http://www.jikexueyuan.com/" class="website" target="_blank">极客学院</a>
-            <p class="description">极客学院作为中国专业IT职业在线教育平台,拥有海量高清IT职业课程,涵盖30+个技术领域</p>
+          <li class="hot-item"><a href="http://bbs.pediy.com/" class="website" target="_blank">看雪论坛</a>
+            <p class="description">软件安全,WEB安全,加密,解密,debug,pack,unpack</p>
           </li>
+          <li class="new-item"><a href="http://www.52pojie.cn/" class="website" target="_blank">吾爱破解</a>
+            <p class="description">关注PC软件安全和移动安全领域</p>
+          </li>  
+          </li>
+          <li class="new-item"><a href="http://www.chinapyg.com/" class="website" target="_blank">飘云阁</a>
+            <p class="description">软件安全、游戏外挂及病毒分析</p>
+          </li> 
+          <li class="new-item"><a href="http://www.xuepojie.com/" class="website" target="_blank">学破解</a>
+            <p class="description">大量的安全、加密解密、破解、逆向教程</p>
+          </li>       
 
+		  <li class="hot-item"><a href="https://segmentfault.com/" class="website" target="_blank">SegmentFault</a>
+            <p class="description">中国领先的开发者社区,纯粹、高质的技术交流平台</p>
+          </li>
+          <li class="hot-item"><a href="http://bbs.csdn.net" class="website" target="_blank">CSDN</a>
+            <p class="description">中国最大的IT技术社区</p>
+          </li>
+		  
+			<li class="hot-item"><a href="http://www.pythontab.com/" class="website" target="_blank">Python Tab</a>
+            <p class="description">python中文开发者社区</p>
+         	 </li>
+
+         	 <li class="hot-item"><a href="http://c.biancheng.net/cpp/" class="website" target="_blank">C语言中文网</a>
+            <p class="description">C语言交流站</p>
+         	 </li>
+
+         	 <li class="hot-item"><a href="http://www.cjsdn.net/" class="website" target="_blank">Cjsdn</a>
+            <p class="description">Java开发网</p>
+         	 </li>
+			 
+			 <li class="hot-item"><a href="http://bailian.openjudge.cn/" class="website" target="_blank">百练</a>
+            <p class="description">北京大学,ACM, 计算机, 教学, 编程, 算法</p>
+         	 </li>
+		  
         </ul>
+		
+		<a href="./moreDL/moreDL.html" class="more-item" target="_blank" style="text-align: center"></br></br></br></br>更</br></br>多</a>
+		
           </section>
 
-      <section data-catalog="weibo" class="active">
+
+           <section data-catalog="FD" class="active">
         <header>
-          <h2 class="icon-weibo">热门微博</h2>
+          <h2 class="icon-learn">前端推荐</h2>
         </header>
         <ul class="website-list">
-          <li class="new-item"><a href="http://weibo.com/vczh" class="website" target="_blank">Vczh</a>
-            <p class="description">知乎大V轮子哥</p>
+      
+          <li class="hot-item"><a href="http://f2er.club/" class="website" target="_blank">醉牛前端</a>
+            <p class="description">做专业的前端平台，提供你需要的东西 </p>
           </li>
-          <li><a href="http://weibo.com/fenng" class="website" target="_blank">Fenng</a>
-            <p class="description">手艺人，写字儿的。做过不会写代码的水货 CTO</p>
-          </li>          
-          <li><a href="http://weibo.com/fenng" class="website" target="_blank">Fenng</a>
-            <p class="description">手艺人，写字儿的。做过不会写代码的水货 CTO</p>
-          </li>   
+          <li class="hot-item"><a href="http://www.bootcss.com/" class="website" target="_blank">Bootstrap中文网</a>
+            <p class="description">Bootstrap简洁、直观、强悍的前端开发框架</p>
+          </li>
+          <li class="hot-item"><a href="http://amazeui.org/getting-started?utm_source=360&utm_medium=cpc&utm_campaign=Download" class="website" target="_blank">Amaze UI</a>
+            <p class="description">妹子 UI
+中国首个开源 HTML5 跨屏前端框架</p>
+          </li>
+           <li class="hot-item"><a href="https://www.zhihu.com/question/50907897" class="website" target="_blank">微信小程序</a>
+            <p class="description">微信小程序是一种全新的连接用户与服务的方式</p>
+          </li>
+          <li class="hot-item"><a href="http://laravelacademy.org/" class="website" target="_blank">Laravel学院</a>
+            <p class="description">Laravel学院致力于提供优质Laravel中文学习资源</p>
+          </li>
+		  
+		   </li> 
+			<li class="new-item"><a href="http://www.dcloud.io/" class="website" target="_blank">HBuilder</a>
+            <p class="description">HBuilder-飞速编码的极客工具，手指爽，眼睛爽</p>
+           </li> 
+                                    
         </ul>
+		
+		<a href="./moreDL/moreDL.html" class="more-item" target="_blank" style="text-align: center"></br></br></br></br>更</br></br>多</a>
+		
           </section>
 
+
+
+		
+    
+         <section data-catalog="SA" class="active">
+        <header>
+          <h2 class="icon-weibo">文件分析</h2>
+        </header>
+        <ul class="website-list">
+          <li class="hot-item"><a href="https://www.virustotal.com/" class="website" target="_blank">VirusTotal</a>
+            <p class="description">analyzes suspicious files and URLs</p>
+          </li>
+          <li class="hot-item"><a href="https://x.threatbook.cn/" class="website" target="_blank">微步在线</a>
+            <p class="description">威胁情报分析平台</p>
+          </li>
+          <li class="hot-item"><a href="https://www.maldun.com/" class="website" target="_blank">魔盾安全分析</a>
+            <p class="description">恶意软件分析 & URL链接扫描 免费在线病毒分析平台</p>
+          </li>
+          <li class="hot-item"><a href="https://habo.qq.com/" class="website" target="_blank">哈勃分析系统</a>
+            <p class="description">哈勃 您身边的安全专家</p>
+          </li>
+          <li class="hot-item"><a href="https://virusscan.jotti.org/" class="website" target="_blank">Jotti</a>
+            <p class="description">恶意软件扫描程序</p>
+          </li>
+          <li class="hot-item"><a href="https://manalyzer.org/" class="website" target="_blank">Manalyzer</a>
+            <p class="description">static analysis on PE executables to detect undesirable behavior</p>
+          </li>
+      <li class="hot-item"><a href="https://fireeye.ijinshan.com/" class="website" target="_blank">火眼</a>
+            <p class="description">火眼 您的文件行为分析专家</p>
+          </li> 
+           <li class="hot-item"><a href="http://www.virscan.org/" class="website" target="_blank">VirSCAN</a>
+            <p class="description">通过多种不同厂家提供的最新版本的病毒检测引擎对您上传的可疑文件进行在线扫描</p>
+          </li> 
+           <li class="hot-item"><a href="https://malwr.com/submission/" class="website" target="_blank">Malwr</a>
+            <p class="description">Malware Analysis by Cuckoo Sandbox</p>
+          </li>
+		  </li> 
+           <li class="hot-item"><a href="http://pmd5.com/" class="website" target="_blank">PMD5</a>
+            <p class="description">MD5在线解密</p>
+          </li> 		  
+		  
+		          
+        </ul>
+		
+		<a href="./moreDL/moreDL.html" class="more-item" target="_blank" style="text-align: center"></br></br></br></br>更</br></br>多</a>
+		
+          </section>
+         
+		
     </div>
-    <div class="tips">
-        <em class="slogan"><a style="color:#fa5f5f"; target="_blank" href="http://www.ziwork.com/">CSDN论坛</a></em> 
-        <span class="hot-words"></span>
-    </div>
-    <!--<div style="margin:40px auto;text-align:center;" id="sponsor">
-    <script type="text/javascript">
-    /*导航AD*/
-    var cpro_id = "u1663818";
-    </script>
-    <script src="http://cpro.baidustatic.com/cpro/ui/c.js" type="text/javascript"></script>
-    </div>-->
+    
 
-
-
+    
+	
+   
   </div>
 </div>
 <aside id="aside">
@@ -193,52 +380,103 @@ var _hmt = _hmt || [];
     <div style="height:300px;">
       <section class="counter">
         <header>
-          <h3>只收录干货</h3>
-          <span class="number"><i>9</i>个</span> </header>
-        <span class="update-date">导航更新日期: <i>2016-11-11</i></span>
-        <div class="recommend"> <span>还有更赞的</span> <a class="btn-recommend" href="http://f2er.club/"  target="_blank"><i>醉牛前端</i></a> </div>
+          <h3>友情链接</h3>
+        </header>
+       
+        <ol class="classics-article-list">
+		
+		  <li><a href="http://blog.csdn.net/u013205877" target="_blank">我的CSDN博客</a></li>
+          <li><a href="http://www.mydrivers.com/zhuanti/" target="_blank">天梯图</a></li>
+          <li><a href="http://cb.drops.wiki/index.html" target="_blank">乌云搜索</a></li>
+        </ol>
+
+        <span class="update-date">导航更新日期: <i>2017-04-08</i></span>
+        <div class="recommend"> 
+        
+        
+         </div>
       </section>
       <section class="classics">
         <header>
-          <h3>经典教程</h3>
+          <h3>博客文章</h3>
         </header>
         <ol class="classics-article-list">
           <li><a href="http://stormzhang.com/android/2014/07/07/learn-android-from-rookie/" target="_blank">Android学习之路</a></li>
           <li><a href="http://lib.csdn.net/article/css3/39436" target="_blank">CSS常见属性</a></li>
-
+          
         </ol>
-        <div class="recommend"> <span>这不算什么</span> <a class="btn-recommend" href="http://weibo.com/2247605355/profile"  target="_blank"><i>投稿</i></a> </div>
+        <div class="recommend">
+		<span>
+		</span>
+		<a class="btn-recommend" href="http://weibo.com/p/230927831368328160215040"  target="_blank">
+		<i>为什么你该开始学习编程了？</i>
+		</a>
+	</br>
+		</br>
+		<a class="btn-recommend" href="http://mp.weixin.qq.com/s?__biz=MzI1NzU3OTE0MA==&mid=2247483670&idx=1&sn=cc082e14834a94aea5a9cf9bddd3b5e9&chksm=ea1400fddd6389ebddf25cc92794c74f73b4dd32b5b2edd4095a30723e682779a5f8278728f0&mpshare=1&scene=1&srcid=0107lLoiOribWQ8kag9x9uKR#rd"  target="_blank">
+		<i>现在学编程晚了么？</i>
+		</a>
+		</br>
+		</br>
+		</div>
       </section>
       <section class="toolkit">
         <header>
-          <h3>支付宝</h3>
+          <h3>微信公众号</h3>
         </header>
         <div class="content">          
-          <img src="img/alipay.jpg" alt="支付宝" width="180" style="margin:12px 0 0 26px;" height="180" />
-          <p style="text-align:center">如果这个导航能帮得上您<strong style="color:#fff"></strong> <br>希望能获得您的捐赠</p>
+          <img src="./devnav/img/alipay.jpg" alt="微信公众号" width="180" style="margin:12px 0 0 26px;" height="180" />
+          <p style="text-align:center">传播资源,分享技术<strong style="color:#fff"></strong> <br>scan and get more！</p>
         </div>
       </section>
       <section class="story">
         <header>
-          <h3>微信</h3>
+          <h3>联系站长</h3>
         </header>
         <div class="content">          
-          <img src="img/wechatjpg.jpg" alt="微信" width="180" style="margin:12px 0 0 26px;" height="180" />
-          <p style="text-align:center">微信号：<strong style="color:#fff">584807419</strong> <br>有事您说话</p>
+          <img src="./devnav/img/wechatjpg.jpg" alt="微信" width="180" style="margin:12px 0 0 26px;" height="180" />
+          <p style="text-align:center"><strong style="color:#fff">投稿和交换链接</strong> <br></p>
         </div>
       </section>
       <section class="power">
         <header>
           <h3>闲言</h3>
         </header>
-
-          <div class="friends"> <span class="item">站长:<a href="http://weibo.com/234008109" target="_blank">@张昆</a></span> <span class="item">公益导航，刚开始还不成熟。参考了优设网的设计，表示感谢，如有侵权，请联系我！</span> </div>
+        
+          <div class="friends">
+          <span class="item">解放收藏夹，方便你我他！</span> 
+		  <span class="item">请扫我(๑•́ ₃ •̀๑)</span>	
+          </div>
         </div>
       </section>
     </div>
   </div>
 </aside>
-<script src="js/jquery.js"></script> 
-<script src="js/main.js?v=1"></script>
+<script src="devnav/js/jquery.js"></script> 
+<script src="devnav/js/main.js?v=1"></script>
+<script>
+<!--------------------------------访问的时候给360自动提交----------------------------------->
+(function(){
+   var src = (document.location.protocol == "http:") ? "http://js.passport.qihucdn.com/11.0.1.js?9a5d076f8d350e18e00b2c984e4b7f15":"https://jspassport.ssl.qhimg.com/11.0.1.js?9a5d076f8d350e18e00b2c984e4b7f15";
+   document.write('<script src="' + src + '" id="sozz"><\/script>');
+})();
+</script>
+<!--------------------------------访问的时候给360自动提交----------------------------------->
+<!--------------------------------访问的时候给百度自动提交----------------------------------->
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https'){
+   bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+  }
+  else{
+  bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+  }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+<!--------------------------------访问的时候给百度自动提交----------------------------------->
 </body>
 </html>
