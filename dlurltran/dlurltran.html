@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<!-- saved from url=(0025)http://www.iqshw.com/url/ -->
+<html lang="zh">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="./style.css" type="text/css" rel="stylesheet">
+<script src="./jquery.js" type="text/javascript"></script>
+<script src="./ajax.js" type="text/javascript"></script>
+</head><body>
+<div id="wrap"><!--/ container-->
+<div class="container">
+<div id="result">
+<div class="box">
+<div class="con">
+<div id="urlconvert">
+<style type="text/css">#result .con #urlconvert P {
+	MARGIN-BOTTOM: 10px
+}
+#result .con #urlconvert LABEL {
+	FONT-WEIGHT: bold
+}
+#result .con #urlconvert .int {
+	WIDTH: 450px
+}
+#result .con #urlconvert #r .int {
+	FONT-WEIGHT: normal; COLOR: #333
+}
+</style>
+
+<script language="javascript" src="./base64.js"></script>
+
+<script language="javascript" src="./urlconvert.js"></script>
+
+<form onsubmit="urlconvert();return false;" action="" method="get">
+<label for="oldurl">原始地址：</label> 
+<input class="int" id="oldurl" name="oldurl"> 
+<input id="button" onclick="urlconvert();" type="button" value="一键转换" name="button"> 
+<hr>
+
+<h5>在原始地址处输入下载地址，点击转换即可</h5><br>
+<div id="r">
+<p><label for="newurl">真实地址:</label> <input class="int" id="newurl" onclick="if(this.value){copy(this.value);}" name="newurl"><span id="down_newurl"></span> </p>
+<p><label for="thunderurl">迅雷地址:</label> <input class="int" id="thunderurl" onclick="if(this.value){copy(this.value);}" name="thunderurl"><span id="down_thunderurl"></span></p>
+<p><label for="flashgeturl">快车地址:</label> <input class="int" id="flashgeturl" onclick="if(this.value){copy(this.value);}" name="flashgeturl"><span id="down_flashgeturl"></span></p>
+<p><label for="xuanfengurl">旋风地址:</label> <input class="int" id="qqurl" onclick="if(this.value){copy(this.value);}" name="qqurl"><span id="down_qqurl"></span></p></div></form></div><!--/ urlconvert--></div><!--/ con--></div><!--/ box--></div><!--/ result-->
+<script src="./webThunderDetect.js"></script>
+</div><!--/ container 2--><!--/ container 3--></div>
+
+</body></html>
